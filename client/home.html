@@ -1,0 +1,898 @@
+<template name="home">
+  <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="">
+      <meta name="author" content="Arvind Srinivasan">
+      <link rel="icon" type="image/png" href="favicon.png" />
+
+      <title>AR/CH</title>
+      <!-- Custom Fonts -->
+      <style type="text/css">
+      /*!
+       * Start Bootstrap - Grayscale Bootstrap Theme (http://startbootstrap.com)
+       * Code licensed under the Apache License v2.0.
+       * For details, see http://www.apache.org/licenses/LICENSE-2.0.
+       */
+       #login-dropdown-list #forgot-password-link, #login-dropdown-list #signup-link {
+           color: #F5B63C !important;
+           margin-top: 10px !important;
+           font-size: .8em;
+       }
+
+      body {
+          width: 100%;
+          height: 100%;
+          font-family: "Montserrat","Helvetica Neue",Helvetica,Arial,sans-serif;
+          color: #fff;
+          background-color: #000;
+      }
+
+      html {
+          width: 100%;
+          height: 100%;
+          background-color: #000;
+
+      }
+      .btn-primary{
+        color: white;
+        background:#1a1a1a;
+        border: none;
+      }
+      .btn-primary:active,.btn-primary:focus,.btn-primary:hover,{
+        color: white;
+        background:#000;
+      }
+
+      .big{
+        font-size: 3em;
+        text-align: left;
+      }
+      .yellow{
+        color: #F5B63C;
+      }
+      .portfolio-item {
+        padding: 0 0 0 0;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+          margin: 0 0 35px;
+          text-transform: uppercase;
+          font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+          font-weight: 700;
+          letter-spacing: 1px;
+      }
+
+      p {
+          margin: 0 0 25px;
+          font-size: 18px;
+          line-height: 1.5;
+      }
+
+      @media(min-width:768px) {
+          p {
+              margin: 0 0 35px;
+              font-size: 20px;
+              line-height: 1.6;
+          }
+      }
+
+      a {
+          color: #F5B63C;
+          -webkit-transition: all .2s ease-in-out;
+          -moz-transition: all .2s ease-in-out;
+          transition: all .2s ease-in-out;
+      }
+
+      a:hover,
+      a:focus {
+          text-decoration: none;
+          color: #1d9b6c;
+      }
+
+      .light {
+          font-weight: 400;
+      }
+
+      .navbar-custom {
+          margin-bottom: 0;
+          border-bottom: 1px solid rgba(255,255,255,.3);
+          text-transform: uppercase;
+          font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+          background-color: #000;
+      }
+
+      .navbar-custom .navbar-brand {
+          font-weight: 700;
+      }
+
+      .navbar-custom .navbar-brand:focus {
+          outline: 0;
+      }
+
+      .navbar-custom .navbar-brand .navbar-toggle {
+          padding: 4px 6px;
+          font-size: 16px;
+          color: #fff;
+      }
+
+      .navbar-custom .navbar-brand .navbar-toggle:focus,
+      .navbar-custom .navbar-brand .navbar-toggle:active {
+          outline: 0;
+      }
+
+      .navbar-custom a {
+          color: #fff;
+      }
+
+      .navbar-custom .nav li a {
+          -webkit-transition: background .3s ease-in-out;
+          -moz-transition: background .3s ease-in-out;
+          transition: background .3s ease-in-out;
+      }
+
+      .navbar-custom .nav li a:hover {
+          outline: 0;
+          color: rgba(255,255,255,.8);
+          background-color: transparent;
+      }
+
+      .navbar-custom .nav li a:focus,
+      .navbar-custom .nav li a:active {
+          outline: 0;
+          background-color: transparent;
+      }
+
+      .navbar-custom .nav li.active {
+          outline: 0;
+      }
+
+      .navbar-custom .nav li.active a {
+          background-color: rgba(255,255,255,.3);
+      }
+
+      .navbar-custom .nav li.active a:hover {
+          color: #fff;
+      }
+
+      @media(min-width:768px) {
+          .navbar-custom {
+              padding: 20px 0;
+              border-bottom: 0;
+              letter-spacing: 1px;
+              background: 0 0;
+              -webkit-transition: background .5s ease-in-out,padding .5s ease-in-out;
+              -moz-transition: background .5s ease-in-out,padding .5s ease-in-out;
+              transition: background .5s ease-in-out,padding .5s ease-in-out;
+          }
+
+          .navbar-custom.top-nav-collapse {
+              padding: 0;
+              border-bottom: 1px solid rgba(255,255,255,.3);
+              background: #000;
+          }
+      }
+
+      .intro {
+          display: table;
+          width: 100%;
+          height: auto;
+          padding: 100px 0;
+          text-align: center;
+          color: #fff;
+          background: url(intro-bg.jpg) no-repeat bottom center scroll;
+          background-color: #000;
+          -webkit-background-size: cover;
+          -moz-background-size: cover;
+          background-size: cover;
+          -o-background-size: cover;
+      }
+
+      .intro .intro-body {
+          display: table-cell;
+          vertical-align: middle;
+      }
+
+      .intro .intro-body .brand-heading {
+          font-size: 40px;
+      }
+
+      .intro .intro-body .intro-text {
+          font-size: 18px;
+      }
+
+      @media(min-width:768px) {
+          .intro {
+              height: 100%;
+              padding: 0;
+          }
+
+          .intro .intro-body .brand-heading {
+              font-size: 100px;
+          }
+
+          .intro .intro-body .intro-text {
+              font-size: 26px;
+          }
+      }
+
+      .btn-circle {
+          width: 70px;
+          height: 70px;
+          margin-top: 15px;
+          padding: 7px 16px;
+          border: 2px solid #fff;
+          border-radius: 100%!important;
+          font-size: 40px;
+          color: #fff;
+          background: 0 0;
+          -webkit-transition: background .3s ease-in-out;
+          -moz-transition: background .3s ease-in-out;
+          transition: background .3s ease-in-out;
+      }
+
+      .btn-circle:hover,
+      .btn-circle:focus {
+          outline: 0;
+          color: #fff;
+          background: rgba(255,255,255,.1);
+      }
+
+      .btn-circle i.animated {
+          -webkit-transition-property: -webkit-transform;
+          -webkit-transition-duration: 1s;
+          -moz-transition-property: -moz-transform;
+          -moz-transition-duration: 1s;
+      }
+
+      .btn-circle:hover i.animated {
+          -webkit-animation-name: pulse;
+          -moz-animation-name: pulse;
+          -webkit-animation-duration: 1.5s;
+          -moz-animation-duration: 1.5s;
+          -webkit-animation-iteration-count: infinite;
+          -moz-animation-iteration-count: infinite;
+          -webkit-animation-timing-function: linear;
+          -moz-animation-timing-function: linear;
+      }
+
+      @-webkit-keyframes pulse {
+          0% {
+              -webkit-transform: scale(1);
+              transform: scale(1);
+          }
+
+          50% {
+              -webkit-transform: scale(1.2);
+              transform: scale(1.2);
+          }
+
+          100% {
+              -webkit-transform: scale(1);
+              transform: scale(1);
+          }
+      }
+
+      @-moz-keyframes pulse {
+          0% {
+              -moz-transform: scale(1);
+              transform: scale(1);
+          }
+
+          50% {
+              -moz-transform: scale(1.2);
+              transform: scale(1.2);
+          }
+
+          100% {
+              -moz-transform: scale(1);
+              transform: scale(1);
+          }
+      }
+
+      .content-section {
+      }
+
+      .download-section {
+          width: 100%;
+          color: #fff;
+          background: url(downloads-bg.jpg) no-repeat center center scroll;
+          background-color: #000;
+          -webkit-background-size: cover;
+          -moz-background-size: cover;
+          background-size: cover;
+          -o-background-size: cover;
+      }
+      .contact-section {
+          width: 100%;
+          color: #fff;
+          background: url(contacts-bg.jpg) no-repeat center center scroll;
+          background-color: #000;
+          -webkit-background-size: cover;
+          -moz-background-size: cover;
+          background-size: cover;
+          -o-background-size: cover;
+      }
+
+      #map {
+          width: 100%;
+          height: 200px;
+          margin-top: 100px;
+      }
+
+      @media(min-width:767px) {
+          .content-section {
+              padding-top: 50px;
+          }
+
+          .download-section {
+              padding: 100px 0;
+          }
+          .contact-section {
+              padding: 100px 0;
+          }
+
+          #map {
+              height: 400px;
+              margin-top: 250px;
+          }
+      }
+
+      .btn {
+          border-radius: 0;
+          text-transform: uppercase;
+          font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+          font-weight: 400;
+          -webkit-transition: all .3s ease-in-out;
+          -moz-transition: all .3s ease-in-out;
+          transition: all .3s ease-in-out;
+      }
+
+      .btn-default {
+          border: 1px solid #F5B63C;
+          color: #F5B63C;
+          background-color: transparent;
+      }
+
+      .btn-default:hover,
+      .btn-default:focus {
+          border: 1px solid #F5B63C;
+          outline: 0;
+          color: #000;
+          background-color: #F5B63C;
+      }
+
+      ul.banner-social-buttons {
+          margin-top: 0;
+      }
+
+      @media(max-width:1199px) {
+          ul.banner-social-buttons {
+              margin-top: 15px;
+          }
+      }
+
+      @media(max-width:767px) {
+          ul.banner-social-buttons li {
+              display: block;
+              margin-bottom: 20px;
+              padding: 0;
+          }
+
+          ul.banner-social-buttons li:last-child {
+              margin-bottom: 0;
+          }
+      }
+
+      footer {
+          padding: 50px 0;
+      }
+
+      footer p {
+          margin: 0;
+      }
+
+      ::-moz-selection {
+          text-shadow: none;
+          background: #fcfcfc;
+          background: rgba(255,255,255,.2);
+      }
+
+      ::selection {
+          text-shadow: none;
+          background: #fcfcfc;
+          background: rgba(255,255,255,.2);
+      }
+
+      img::selection {
+          background: 0 0;
+      }
+
+      img::-moz-selection {
+          background: 0 0;
+      }
+
+      body {
+          webkit-tap-highlight-color: rgba(255,255,255,.2);
+      }
+      </style>
+      <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+      <link href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+      <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+
+      <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+      <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+      <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+          <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+      <![endif]-->
+
+  </head>
+
+  <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+
+      <!-- Navigation -->
+      <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+          <div class="container">
+              <div class="navbar-header">
+                  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                      <i class="fa fa-bars"></i>
+                  </button>
+              </div>
+
+              <!-- Collect the nav links, forms, and other content for toggling -->
+              <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+                  <ul class="nav navbar-nav">
+                      <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                      <li class="hidden">
+                          <a href="#page-top"></a>
+                      </li>
+                      <li>
+                          <a class="page-scroll" href="#about">About</a>
+                      </li>
+                      <li>
+                          <a class="page-scroll" href="#portfolio">Artworks</a>
+                      </li>
+                      <li>
+                          <a class="page-scroll" href="#blog">Blog</a>
+                      </li>
+                      <li>
+                          <a class="page-scroll" href="#clicks">Photography</a>
+                      </li>
+                       <li>
+                          <a class="page-scroll" href="#contact">Contact</a>
+                      </li>
+                      <li style="padding-top:15px;margin-left:15px;">
+                      {{> loginButtons}}
+                    </li>
+                  </ul>
+              </div>
+              <!-- /.navbar-collapse -->
+          </div>
+          <!-- /.container -->
+      </nav>
+
+      <!-- Intro Header -->
+      <header class="intro">
+          <div class="intro-body">
+              <div class="container">
+                  <div class="row">
+                      <div class="col-md-8 col-md-offset-2">
+                          <h1 class="brand-heading" style="color:white;">AR/CH</h1>
+                          <p class="intro-text">A passionate artist, with a flair of technology.</p>
+                          <a href="#about" class="btn btn-circle page-scroll">
+                              <i class="fa fa-angle-double-down animated"></i>
+                          </a>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </header>
+
+      <!-- About Section -->
+      <section id="about" class="container content-section text-center" >
+          <div class="row">
+              <div class="col-lg-8 col-lg-offset-2" style="padding-top:50px;padding-bottom:50px;">
+                  <p class="big">I'm <span class="yellow">Arvind Srinivasan</span>. <br>A student by day, an <span class="yellow">artist</span> by <span class="yellow">night</span>. <br>Lover of <span class="yellow">potatoes</span> and <span class="yellow">Laptops</span>. <br>
+                    Hardcore <span class="yellow"></span> fan.  </p>
+                  <br>
+              </div>
+          </div>
+      </section>
+      <!-- Portfolio Section -->
+      <section id="portfolio" class="container content-section text-center" style="padding-top:50px;padding-bottom:50px;">
+          <div class="row">
+              <div class="col-lg-12">
+                  <h2>My Artworks</h2>
+                  <p>Keen in creative pursuits since my childhood, I geve myself lots of challenges to experiment myself with. In an effort to develop my own unique style, I started documenting contemporary styles of artists and tried imitating them, in order to get a feel of how to achieve some techniques they have used, but with my own creative twists.</p><p>Following are a sample of my works.</p>
+                  <div class="container">
+                      <!-- Projects Row -->
+                      <div class="row">
+                          <div class="col-md-3 portfolio-item">
+                              <a href="http://arvindart.cheenu.net/assets/images/2014-04-28-1398673922-640x640-14.jpg"   data-lightbox="set1" data-title="Frog in my backyard">
+                                  <img class="img-responsive" src="http://arvindart.cheenu.net/assets/images/2014-04-28-1398673922-640x640-14.jpg" alt="">
+                              </a>
+                          </div>
+                          <div class="col-md-3 portfolio-item">
+                              <a href="http://arvindart.cheenu.net/assets/images/2014-07-04-1404486242-640x640-43.jpg"   data-lightbox="set1" data-title="Brain Fart: A lazy doodle">
+                                  <img class="img-responsive" src="http://arvindart.cheenu.net/assets/images/2014-07-04-1404486242-640x640-43.jpg" alt="">
+                              </a>
+                          </div>
+                          <div class="col-md-3 portfolio-item">
+                              <a href="http://arvindart.cheenu.net/assets/images/2014-12-11-1418295618-640x640-3.jpg"   data-lightbox="set1" data-title="Mr Bean Pointillist Approach">
+                                  <img class="img-responsive" src="http://arvindart.cheenu.net/assets/images/2014-12-11-1418295618-640x640-3.jpg" alt="">
+                              </a>
+                          </div>
+                          <div class="col-md-3 portfolio-item">
+                              <a href="http://arvindart.cheenu.net/assets/images/2015-02-12-1423739888-640x640-3.jpg"   data-lightbox="set1" data-title="Michael Jackson Caricature">
+                                  <img class="img-responsive" src="http://arvindart.cheenu.net/assets/images/2015-02-12-1423739888-640x640-3.jpg" alt="">
+                              </a>
+                          </div>
+                      </div>
+                      <!-- /.row -->
+
+                      <!-- Projects Row -->
+                      <div class="row">
+                          <div class="col-md-3 portfolio-item">
+                              <a href="http://arvindart.cheenu.net/assets/images/2015-04-15-1429061391-640x640-74.jpg"   data-lightbox="set1" data-title="An illustration of my dad">
+                                  <img class="img-responsive" src="http://arvindart.cheenu.net/assets/images/2015-04-15-1429061391-640x640-74.jpg" alt="">
+                              </a>
+                          </div>
+                          <div class="col-md-3 portfolio-item">
+                              <a href="http://arvindart.cheenu.net/assets/images/2015-07-03-1435945128-640x640-93.jpg"   data-lightbox="set1" data-title="Mahakavi Bharathiar">
+                                  <img class="img-responsive" src="http://arvindart.cheenu.net/assets/images/2015-07-03-1435945128-640x640-93.jpg" alt="">
+                              </a>
+                          </div>
+                          <div class="col-md-3 portfolio-item">
+                              <a href="http://arvindart.cheenu.net/assets/images/2015-07-04-1435985571-640x640-52.jpg"   data-lightbox="set1" data-title="Mahatma Gandhi">
+                                  <img class="img-responsive" src="http://arvindart.cheenu.net/assets/images/2015-07-04-1435985571-640x640-52.jpg" alt="">
+                              </a>
+                          </div>
+                          <div class="col-md-3 portfolio-item">
+                              <a href="http://arvindart.cheenu.net/assets/images/2015-04-15-1429096067-640x640-79.jpg"   data-lightbox="set1" data-title="My Crazy self-portrait">
+                                  <img class="img-responsive" src="http://arvindart.cheenu.net/assets/images/2015-04-15-1429096067-640x640-79.jpg" alt="">
+                              </a>
+                          </div>
+                        </div>
+                      <!-- /.row -->
+
+                      <!-- Projects Row -->
+                      <div class="row">
+                          <div class="col-md-3 portfolio-item">
+                              <a href="http://arvindart.cheenu.net/assets/images/2015-05-29-1432893062-640x640-74.jpg"   data-lightbox="set1" data-title="In progress piece of the'Glowing Fruit'">
+                                  <img class="img-responsive" src="http://arvindart.cheenu.net/assets/images/2015-05-29-1432893062-640x640-74.jpg" alt="">
+                              </a>
+                          </div>
+                          <div class="col-md-3 portfolio-item">
+                              <a href="http://arvindart.cheenu.net/assets/images/2015-05-29-1432893179-640x640-83.jpg"   data-lightbox="set1" data-title="In progress piece of the'Glowing Fruit' - inverted">
+                                  <img class="img-responsive" src="http://arvindart.cheenu.net/assets/images/2015-05-29-1432893179-640x640-83.jpg" alt="">
+                              </a>
+                          </div>
+                          <div class="col-md-3 portfolio-item">
+                              <a href="http://arvindart.cheenu.net/assets/images/2015-05-29-1432911719-640x640-95.jpg"   data-lightbox="set1" data-title="Inverted Art: 'Glow Fruit'">
+                                  <img class="img-responsive" src="http://arvindart.cheenu.net/assets/images/2015-05-29-1432911719-640x640-95.jpg" alt="">
+                              </a>
+                          </div>
+                          <div class="col-md-3 portfolio-item">
+                              <a href="http://arvindart.cheenu.net/assets/images/2015-07-12-1436709229-640x640-17.jpg"   data-lightbox="set1" data-title="Outbreak of Emotions">
+                                  <img class="img-responsive" src="http://arvindart.cheenu.net/assets/images/2015-07-12-1436709229-640x640-17.jpg" alt="">
+                              </a>
+                          </div>
+                      </div>
+                      <!-- /.row -->
+                  </div>
+                  <br>
+                  <p>For more recent content, please refer the link to my blog below. </p>
+                  <br>
+              </div>
+          </div>
+      </section>
+      <!-- Download Section -->
+      <section id="blog" class="content-section text-center" style="padding-top:0px;">
+          <div class="download-section">
+              <div class="container">
+                  <div class="col-lg-8 col-lg-offset-2">
+                    <h2>My Blog</h2>
+                      <p>I'm a college student, with keen interest in graphic design and illustration. I've coached myself over the years trying to develop a style, which has just begun to spark. To document this growth of mine, I decided to keep an online diary where anyone and everyone can be inspired.</p>
+                      <a href="/blog" class="btn btn-default btn-lg">View Blog</a>
+                      <br>
+                  </div>
+              </div>
+          </div>
+      </section>
+      <section id="clicks" class="container content-section text-center" style="padding-top:50px;padding-bottom:50px;">
+          <div class="row">
+              <div class="col-lg-12">
+                  <h2>My Clicks</h2>
+                  <p>Capturing light has always been my lifelong dream. Not talking of lightsabers, but of cameras. Nowadays, even our handheld devices can take pictures of quality that far surpass many industry standard film cameras. Hence, given the technology, why waste it? <br><br>All the photographs you're about to see is unedited iphone camera roll pics.</p>
+                  <div class="container">
+                      <!-- Projects Row -->
+                      <div class="row">
+                          <div class="col-md-3 portfolio-item">
+                              <a href="http://arvindart.cheenu.net/assets/images/2014-03-29-1396060289-640x640-58-640x640-44.jpg"  data-lightbox="set2" data-title="Light trails across the busy night traffic">
+                                  <img class="img-responsive" src="http://arvindart.cheenu.net/assets/images/2014-03-29-1396060289-640x640-58-640x640-44.jpg" alt="">
+                              </a>
+                          </div>
+                          <div class="col-md-3 portfolio-item">
+                            <a href="http://arvindart.cheenu.net/assets/images/2014-03-29-1396064612-640x640-9-640x640-92.jpg"  data-lightbox="set2" data-title="Macro of a yellow marigold">
+                                  <img class="img-responsive" src="http://arvindart.cheenu.net/assets/images/2014-03-29-1396064612-640x640-9-640x640-92.jpg" alt="">
+                              </a>
+                          </div>
+                          <div class="col-md-3 portfolio-item">
+                            <a href="http://arvindart.cheenu.net/assets/images/2014-03-29-1396065121-640x640-3-640x640-40.jpg"  data-lightbox="set2" data-title="Banana's rule of thirds">
+                                  <img class="img-responsive" src="http://arvindart.cheenu.net/assets/images/2014-03-29-1396065121-640x640-3-640x640-40.jpg" alt="">
+                              </a>
+                          </div>
+                          <div class="col-md-3 portfolio-item">
+                            <a href="http://arvindart.cheenu.net/assets/images/2014-03-29-1396065566-640x640-78-640x640-97.jpg"  data-lightbox="set2" data-title="'immiscible aether' is what i call this. can you guess why?">
+                                  <img class="img-responsive" src="http://arvindart.cheenu.net/assets/images/2014-03-29-1396065566-640x640-78-640x640-97.jpg" alt="">
+                              </a>
+                          </div>
+                      </div>
+                      <!-- /.row -->
+
+                      <!-- Projects Row -->
+                      <div class="row">
+                          <div class="col-md-3 portfolio-item">
+                            <a href="http://arvindart.cheenu.net/assets/images/2014-12-26-1419597443-640x640-79.jpg"  data-lightbox="set2" data-title="tasty, slurpy Gulab Jamun">
+                                  <img class="img-responsive" src="http://arvindart.cheenu.net/assets/images/2014-12-26-1419597443-640x640-79.jpg" alt="">
+                              </a>
+                          </div>
+                          <div class="col-md-3 portfolio-item">
+                            <a href="http://arvindart.cheenu.net/assets/images/2014-04-28-1398663082-640x640-14-640x640-25.jpg"  data-lightbox="set2" data-title="long exposure car lights">
+                                  <img class="img-responsive" src="http://arvindart.cheenu.net/assets/images/2014-04-28-1398663082-640x640-14-640x640-25.jpg" alt="">
+                              </a>
+                          </div>
+                          <div class="col-md-3 portfolio-item">
+                            <a href="http://arvindart.cheenu.net/assets/images/2014-05-16-1400264042-640x640-82-640x640-16.jpg"  data-lightbox="set2" data-title="Mantis in my garden">
+                                  <img class="img-responsive" src="http://arvindart.cheenu.net/assets/images/2014-05-16-1400264042-640x640-82-640x640-16.jpg" alt="">
+                              </a>
+                          </div>
+                          <div class="col-md-3 portfolio-item">
+                            <a href="http://arvindart.cheenu.net/assets/images/2015-03-19-1426759533-640x640-26.jpg"  data-lightbox="set2" data-title="moneypenny">
+                                  <img class="img-responsive" src="http://arvindart.cheenu.net/assets/images/2015-03-19-1426759533-640x640-26.jpg" alt="">
+                              </a>
+                          </div>
+                        </div>
+                      <!-- /.row -->
+
+                      <!-- Projects Row -->
+                      <div class="row">
+                          <div class="col-md-3 portfolio-item">
+                            <a href="http://arvindart.cheenu.net/assets/images/2014-05-16-1400266830-640x640-31-640x640-35.jpg"  data-lightbox="set2" data-title="bike headlights">
+                                  <img class="img-responsive" src="http://arvindart.cheenu.net/assets/images/2014-05-16-1400266830-640x640-31-640x640-35.jpg" alt="">
+                              </a>
+                          </div>
+                          <div class="col-md-3 portfolio-item">
+                            <a href="http://arvindart.cheenu.net/assets/images/2014-07-04-1404484398-640x640-8-640x640-13.jpg"  data-lightbox="set2" data-title="rainy day..">
+                                  <img class="img-responsive" src="http://arvindart.cheenu.net/assets/images/2014-07-04-1404484398-640x640-8-640x640-13.jpg" alt="">
+                              </a>
+                          </div>
+                          <div class="col-md-3 portfolio-item">
+                            <a href="http://arvindart.cheenu.net/assets/images/2014-12-26-1419577492-640x640-21-640x640-71.jpg"  data-lightbox="set2" data-title="Lamp shells glowing in dark">
+                                  <img class="img-responsive" src="http://arvindart.cheenu.net/assets/images/2014-12-26-1419577492-640x640-21-640x640-71.jpg" alt="">
+                              </a>
+                          </div>
+                          <div class="col-md-3 portfolio-item">
+                            <a href="http://arvindart.cheenu.net/assets/images/2014-04-18-1397790338-640x640-33-640x640-35.jpg"  data-lightbox="set2" data-title="closeup of calm, beautiful calf">
+                                  <img class="img-responsive" src="http://arvindart.cheenu.net/assets/images/2014-04-18-1397790338-640x640-33-640x640-35.jpg" alt="">
+                              </a>
+                          </div>
+                      </div>
+                      <!-- /.row -->
+                  </div>
+                  <br>
+                  <p>For more recent content, please refer the link to my blog above. </p>
+                  <br>
+              </div>
+          </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section id="contact" class="content-section text-center" style="padding-top:0px;">
+          <div class="contact-section">
+            <div class="container">
+              <div class="col-lg-8 col-lg-offset-2">
+                  <h2>Contact Me</h2>
+                  <p>Feel free to contact me in any of the following media outlets. I'm open to anyone willing to give me suggestions/feedback, or just to say hello!</p>
+               <ul class="list-inline banner-social-buttons">
+                      <li>
+                          <a href="mailto:arvind@cheenu.net" class="btn btn-default btn-lg"><i class="fa fa-envelope fa-fw"></i> <span class="network-name">Gmail</span></a>
+                      </li>
+                      <li>
+                          <a href="https://twitter.com/Arvindcheenu12" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>
+                      </li>
+                      <li>
+                          <a href="https://www.instagram.com/arvindcheenu/" class="btn btn-default btn-lg"><i class="fa fa-instagram fa-fw"></i> <span class="network-name">Instagram</span></a>
+                      </li>
+                      <li>
+                          <a href="https://in.pinterest.com/Arvindcheenu/" class="btn btn-default btn-lg"><i class="fa fa-pinterest fa-fw"></i> <span class="network-name">Pinterest</span></a>
+                      </li>
+                  </ul>
+              </div>
+            </div>
+          </div>
+      </section>
+      <footer>
+          <div class="container text-center">
+              <p>Copyright &copy; ArvindCheenu 2016.</p>
+          </div>
+      </footer>
+<script type="text/javascript">
+function collapseNavbar() {
+    if ($(".navbar").offset().top > 50) {
+        $(".navbar-fixed-top").addClass("top-nav-collapse");
+    } else {
+        $(".navbar-fixed-top").removeClass("top-nav-collapse");
+    }
+}
+jQuery.easing.jswing=jQuery.easing.swing;jQuery.extend(jQuery.easing,{def:"easeOutQuad",swing:function(e,f,a,h,g){return jQuery.easing[jQuery.easing.def](e,f,a,h,g)},easeInQuad:function(e,f,a,h,g){return h*(f/=g)*f+a},easeOutQuad:function(e,f,a,h,g){return -h*(f/=g)*(f-2)+a},easeInOutQuad:function(e,f,a,h,g){if((f/=g/2)<1){return h/2*f*f+a}return -h/2*((--f)*(f-2)-1)+a},easeInCubic:function(e,f,a,h,g){return h*(f/=g)*f*f+a},easeOutCubic:function(e,f,a,h,g){return h*((f=f/g-1)*f*f+1)+a},easeInOutCubic:function(e,f,a,h,g){if((f/=g/2)<1){return h/2*f*f*f+a}return h/2*((f-=2)*f*f+2)+a},easeInQuart:function(e,f,a,h,g){return h*(f/=g)*f*f*f+a},easeOutQuart:function(e,f,a,h,g){return -h*((f=f/g-1)*f*f*f-1)+a},easeInOutQuart:function(e,f,a,h,g){if((f/=g/2)<1){return h/2*f*f*f*f+a}return -h/2*((f-=2)*f*f*f-2)+a},easeInQuint:function(e,f,a,h,g){return h*(f/=g)*f*f*f*f+a},easeOutQuint:function(e,f,a,h,g){return h*((f=f/g-1)*f*f*f*f+1)+a},easeInOutQuint:function(e,f,a,h,g){if((f/=g/2)<1){return h/2*f*f*f*f*f+a}return h/2*((f-=2)*f*f*f*f+2)+a},easeInSine:function(e,f,a,h,g){return -h*Math.cos(f/g*(Math.PI/2))+h+a},easeOutSine:function(e,f,a,h,g){return h*Math.sin(f/g*(Math.PI/2))+a},easeInOutSine:function(e,f,a,h,g){return -h/2*(Math.cos(Math.PI*f/g)-1)+a},easeInExpo:function(e,f,a,h,g){return(f==0)?a:h*Math.pow(2,10*(f/g-1))+a},easeOutExpo:function(e,f,a,h,g){return(f==g)?a+h:h*(-Math.pow(2,-10*f/g)+1)+a},easeInOutExpo:function(e,f,a,h,g){if(f==0){return a}if(f==g){return a+h}if((f/=g/2)<1){return h/2*Math.pow(2,10*(f-1))+a}return h/2*(-Math.pow(2,-10*--f)+2)+a},easeInCirc:function(e,f,a,h,g){return -h*(Math.sqrt(1-(f/=g)*f)-1)+a},easeOutCirc:function(e,f,a,h,g){return h*Math.sqrt(1-(f=f/g-1)*f)+a},easeInOutCirc:function(e,f,a,h,g){if((f/=g/2)<1){return -h/2*(Math.sqrt(1-f*f)-1)+a}return h/2*(Math.sqrt(1-(f-=2)*f)+1)+a},easeInElastic:function(f,h,e,l,k){var i=1.70158;var j=0;var g=l;if(h==0){return e}if((h/=k)==1){return e+l}if(!j){j=k*0.3}if(g<Math.abs(l)){g=l;var i=j/4}else{var i=j/(2*Math.PI)*Math.asin(l/g)}return -(g*Math.pow(2,10*(h-=1))*Math.sin((h*k-i)*(2*Math.PI)/j))+e},easeOutElastic:function(f,h,e,l,k){var i=1.70158;var j=0;var g=l;if(h==0){return e}if((h/=k)==1){return e+l}if(!j){j=k*0.3}if(g<Math.abs(l)){g=l;var i=j/4}else{var i=j/(2*Math.PI)*Math.asin(l/g)}return g*Math.pow(2,-10*h)*Math.sin((h*k-i)*(2*Math.PI)/j)+l+e},easeInOutElastic:function(f,h,e,l,k){var i=1.70158;var j=0;var g=l;if(h==0){return e}if((h/=k/2)==2){return e+l}if(!j){j=k*(0.3*1.5)}if(g<Math.abs(l)){g=l;var i=j/4}else{var i=j/(2*Math.PI)*Math.asin(l/g)}if(h<1){return -0.5*(g*Math.pow(2,10*(h-=1))*Math.sin((h*k-i)*(2*Math.PI)/j))+e}return g*Math.pow(2,-10*(h-=1))*Math.sin((h*k-i)*(2*Math.PI)/j)*0.5+l+e},easeInBack:function(e,f,a,i,h,g){if(g==undefined){g=1.70158}return i*(f/=h)*f*((g+1)*f-g)+a},easeOutBack:function(e,f,a,i,h,g){if(g==undefined){g=1.70158}return i*((f=f/h-1)*f*((g+1)*f+g)+1)+a},easeInOutBack:function(e,f,a,i,h,g){if(g==undefined){g=1.70158}if((f/=h/2)<1){return i/2*(f*f*(((g*=(1.525))+1)*f-g))+a}return i/2*((f-=2)*f*(((g*=(1.525))+1)*f+g)+2)+a},easeInBounce:function(e,f,a,h,g){return h-jQuery.easing.easeOutBounce(e,g-f,0,h,g)+a},easeOutBounce:function(e,f,a,h,g){if((f/=g)<(1/2.75)){return h*(7.5625*f*f)+a}else{if(f<(2/2.75)){return h*(7.5625*(f-=(1.5/2.75))*f+0.75)+a}else{if(f<(2.5/2.75)){return h*(7.5625*(f-=(2.25/2.75))*f+0.9375)+a}else{return h*(7.5625*(f-=(2.625/2.75))*f+0.984375)+a}}}},easeInOutBounce:function(e,f,a,h,g){if(f<g/2){return jQuery.easing.easeInBounce(e,f*2,0,h,g)*0.5+a}return jQuery.easing.easeOutBounce(e,f*2-g,0,h,g)*0.5+h*0.5+a}});
+$(window).scroll(collapseNavbar);
+$(document).ready(collapseNavbar);
+
+// jQuery for page scrolling feature - requires jQuery Easing plugin
+$(function() {
+    $('a.page-scroll').bind('click', function(event) {
+        var $anchor = $(this);
+        $('html, body').stop().animate({
+            scrollTop: $($anchor.attr('href')).offset().top
+        }, 1500, 'easeInOutExpo');
+        event.preventDefault();
+    });
+});
+
+// Closes the Responsive Menu on Menu Item Click
+$('.navbar-collapse ul li a').click(function() {
+  if ($(this).attr('class') != 'dropdown-toggle active' && $(this).attr('class') != 'dropdown-toggle') {
+    $('.navbar-toggle:visible').click();
+  }
+});
+
+// Google Maps Scripts
+var map = null;
+// When the window has finished loading create our google map below
+google.maps.event.addDomListener(window, 'load', init);
+google.maps.event.addDomListener(window, 'resize', function() {
+    map.setCenter(new google.maps.LatLng(40.6700, -73.9400));
+});
+
+function init() {
+    // Basic options for a simple Google Map
+    // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
+    var mapOptions = {
+        // How zoomed in you want the map to start at (always required)
+        zoom: 15,
+
+        // The latitude and longitude to center the map (always required)
+        center: new google.maps.LatLng(40.6700, -73.9400), // New York
+
+        // Disables the default Google Maps UI components
+        disableDefaultUI: true,
+        scrollwheel: false,
+        draggable: false,
+
+        // How you would like to style the map.
+        // This is where you would paste any style found on Snazzy Maps.
+        styles: [{
+            "featureType": "water",
+            "elementType": "geometry",
+            "stylers": [{
+                "color": "#000000"
+            }, {
+                "lightness": 17
+            }]
+        }, {
+            "featureType": "landscape",
+            "elementType": "geometry",
+            "stylers": [{
+                "color": "#000000"
+            }, {
+                "lightness": 20
+            }]
+        }, {
+            "featureType": "road.highway",
+            "elementType": "geometry.fill",
+            "stylers": [{
+                "color": "#000000"
+            }, {
+                "lightness": 17
+            }]
+        }, {
+            "featureType": "road.highway",
+            "elementType": "geometry.stroke",
+            "stylers": [{
+                "color": "#000000"
+            }, {
+                "lightness": 29
+            }, {
+                "weight": 0.2
+            }]
+        }, {
+            "featureType": "road.arterial",
+            "elementType": "geometry",
+            "stylers": [{
+                "color": "#000000"
+            }, {
+                "lightness": 18
+            }]
+        }, {
+            "featureType": "road.local",
+            "elementType": "geometry",
+            "stylers": [{
+                "color": "#000000"
+            }, {
+                "lightness": 16
+            }]
+        }, {
+            "featureType": "poi",
+            "elementType": "geometry",
+            "stylers": [{
+                "color": "#000000"
+            }, {
+                "lightness": 21
+            }]
+        }, {
+            "elementType": "labels.text.stroke",
+            "stylers": [{
+                "visibility": "on"
+            }, {
+                "color": "#000000"
+            }, {
+                "lightness": 16
+            }]
+        }, {
+            "elementType": "labels.text.fill",
+            "stylers": [{
+                "saturation": 36
+            }, {
+                "color": "#000000"
+            }, {
+                "lightness": 40
+            }]
+        }, {
+            "elementType": "labels.icon",
+            "stylers": [{
+                "visibility": "off"
+            }]
+        }, {
+            "featureType": "transit",
+            "elementType": "geometry",
+            "stylers": [{
+                "color": "#000000"
+            }, {
+                "lightness": 19
+            }]
+        }, {
+            "featureType": "administrative",
+            "elementType": "geometry.fill",
+            "stylers": [{
+                "color": "#000000"
+            }, {
+                "lightness": 20
+            }]
+        }, {
+            "featureType": "administrative",
+            "elementType": "geometry.stroke",
+            "stylers": [{
+                "color": "#000000"
+            }, {
+                "lightness": 17
+            }, {
+                "weight": 1.2
+            }]
+        }]
+    };
+}
+    lightbox.option({
+      'resizeDuration': 100,
+      'wrapAround': true,
+    })
+</script>
+  </body>
+</template>
